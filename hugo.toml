@@ -1,0 +1,59 @@
+baseURL = "https://thewildchip.github.io/"
+locale = "en-us"
+title = "thewildchip"
+theme = "shibui"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "rss"]
+
+[params]
+  description = "Daniel Panoor's Portfolio"
+  comments = false
+  showtoc = false
+  showreadingtime = false
+  showlastmod = false
+
+[params.author]
+  name = "Daniel Panoor"
+  email = ""
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = true
+    tabWidth = 4
+    style = "algol_nu"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = true
+
+[menu]
+  [[menu.main]]
+    name = "contact"
+    url = "/contact/"
+    weight = 10
+  [[menu.main]]
+    name = "github"
+    url = "https://github.com/thewildchip"
+    weight = 30
+  [[menu.main]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/danielpanoor/"
+    weight = 40
+  [[menu.main]]
+    name = "blog"
+    url = "/blog/"
+    weight = 50
+
+[build]
+  writeStats = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

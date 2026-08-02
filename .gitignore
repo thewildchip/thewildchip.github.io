@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Hugo local/generated files
+public/
+resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# Do not publish CV PDFs until intentionally ready
+static/*.pdf
+private-cv/
+
+# Local environment/secrets
+.env
+.env.*
+!.env.example

@@ -1,0 +1,124 @@
+:root {
+  --bg-h: 42;
+  --bg-s: 22%;
+  --bg-l: 97%;
+  --font-size-base: 1.1rem;
+  --font-size-small: 0.76rem;
+  --font-size-code: 0.86rem;
+  --spacing-base: 1.55em;
+  --container-width: 62ch;
+}
+
+body {
+  letter-spacing: -0.005em;
+}
+
+main {
+  padding-top: 0.25rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+p {
+  max-width: 58ch;
+}
+
+main a {
+  display: inline;
+  margin-left: 0;
+}
+
+main ul {
+  margin-left: 0;
+  padding-left: 1.4em;
+}
+
+main ol {
+  margin-left: 0;
+  padding-left: 1.8em;
+}
+
+.path-nav {
+  padding-top: 0;
+  padding-bottom: calc(var(--spacing-base) * 0.85);
+  margin-bottom: calc(var(--spacing-base) * 0.9);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.terminal-nav {
+  margin-top: calc(var(--spacing-base) * 1.6);
+}
+
+.terminal-nav nav ul {
+  gap: 1.35em;
+  flex-wrap: wrap;
+}
+
+footer {
+  color: var(--color-text-muted);
+  padding-top: calc(var(--spacing-base) * 1.5);
+}
+
+.site-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-base);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+footer p,
+footer a {
+  color: var(--color-text-muted);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-h: 42;
+    --bg-s: 8%;
+    --bg-l: 12%;
+    --color-bg-secondary: hsl(42 8% 14%);
+    --color-border: hsl(42 7% 21%);
+    --color-selection-bg: hsl(42 10% 24%);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg-h: 42;
+  --bg-s: 8%;
+  --bg-l: 12%;
+  --color-bg-secondary: hsl(42 8% 14%);
+  --color-border: hsl(42 7% 21%);
+  --color-selection-bg: hsl(42 10% 24%);
+}
+
+:root[data-theme="light"] {
+  --bg-h: 42;
+  --bg-s: 22%;
+  --bg-l: 97%;
+}
+
+.theme-toggle {
+  appearance: none;
+  display: inline-flex;
+  gap: 0.5em;
+  align-items: baseline;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  font: var(--font-size-base) / var(--spacing-base) var(--font-family-mono);
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--color-text-primary);
+  border-bottom: 1px dotted var(--color-text-primary);
+}

@@ -1,0 +1,59 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+  {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}
+</title>
+
+{{ with .Description | default .Site.Params.description }}
+  <meta name="description" content="{{ . }}" />
+{{ end }}
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<meta property="og:title" content="{{ .Title }}" />
+{{ with .Description | default .Site.Params.description }}
+  <meta property="og:description" content="{{ . }}" />
+{{ end }}
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ with .Site.Params.ogImage }}
+  <meta property="og:image" content="{{ . | absURL }}" />
+{{ end }}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ .Title }}" />
+{{ with .Description | default .Site.Params.description }}
+  <meta name="twitter:description" content="{{ . }}" />
+{{ end }}
+{{ with .Site.Params.twitterHandle }}
+  <meta name="twitter:site" content="@{{ . }}" />
+{{ end }}
+{{ with .Site.Params.ogImage }}
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+{{ end }}
+
+<script type="application/ld+json">
+  {{- if .IsHome -}}
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.Title }}",
+    "url": "{{ .Permalink }}"
+    {{- with .Description | default .Site.Params.description }},
+    "description": "{{ . }}"
+    {{- end }}
+  }
+  {{- else -}}
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ .Title }}",
+    "url": "{{ .Permalink }}"
+    {{- with .Description | default .Site.Params.description }},
+    "description": "{{ . }}"
+    {{- end }}
+  }
+  {{- end -}}
+</script>
+
+{{ partialCached "head/favicon.html" . }}
+{{ partialCached "head/css.html" . }}

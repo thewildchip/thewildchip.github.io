@@ -1,0 +1,57 @@
+<!doctype html>
+<html
+  lang="{{ site.Language.Locale }}"
+  dir="{{ or site.Language.Direction `ltr` }}"
+>
+  <head>
+    <script>
+      (function () {
+        var storedTheme = localStorage.getItem("theme");
+        if (storedTheme === "light" || storedTheme === "dark") {
+          document.documentElement.dataset.theme = storedTheme;
+        }
+      })();
+    </script>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header role="banner">{{ partial "header.html" . }}</header>
+    <main id="main-content" role="main">{{ block "main" . }}{{ end }}</main>
+    <footer role="contentinfo">{{ partial "footer.html" . }}</footer>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var button = document.querySelector(".theme-toggle");
+        if (!button) return;
+
+        function systemTheme() {
+          return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        function currentTheme() {
+          return root.dataset.theme || systemTheme();
+        }
+
+        function updateButton() {
+          var active = currentTheme();
+          button.textContent = active === "dark" ? "white" : "dark";
+          button.setAttribute("aria-pressed", active === "dark" ? "true" : "false");
+        }
+
+        button.addEventListener("click", function () {
+          var next = currentTheme() === "dark" ? "light" : "dark";
+          root.dataset.theme = next;
+          localStorage.setItem("theme", next);
+          updateButton();
+        });
+
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+          if (!localStorage.getItem("theme")) updateButton();
+        });
+
+        updateButton();
+      })();
+    </script>
+  </body>
+</html>
