@@ -5,12 +5,8 @@ description = "Daniel Panoor's Portfolio Homepage"
 
 # Daniel Panoor
 
-I am a high school student from munich ^‿^ and an aspiring [polymath](https://en.wikipedia.org/wiki/Polymath) - I love learning things and solving problems.
+I am a high school student from munich ^‿^ and an aspiring [polymath](https://en.wikipedia.org/wiki/Polymath) - I love learning things, building stuff and solving problems.
 
-I am currenlty interested in ...
-- [mathematics](/mathematics)
-- [ai](/ai)
-- [physics](/physics)
 
-My list of the [best no-brain-rot youtubers](/youtubers) that explain cool stuff.
+Check out [crispr-genie-lab](https://github.com/thewildchip/crispr-genie-lab-jf) - Predicting gRNA on-target efficiency and off-target risk using machine learning models.
 

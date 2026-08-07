@@ -1,6 +1,6 @@
 baseURL = "https://thewildchip.github.io/"
 locale = "en-us"
-title = "thewildchip"
+title = "Daniel Panoor"
 theme = "shibui"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "rss"]
@@ -35,9 +35,13 @@ disableKinds = ["taxonomy", "term", "rss"]
 
 [menu]
   [[menu.main]]
+    name = "cv"
+    url = "/cv/"
+    weight = 10
+  [[menu.main]]
     name = "contact"
     url = "/contact/"
-    weight = 10
+    weight = 20
   [[menu.main]]
     name = "github"
     url = "https://github.com/thewildchip"

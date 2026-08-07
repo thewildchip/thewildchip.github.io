@@ -2,6 +2,7 @@
   --bg-h: 42;
   --bg-s: 22%;
   --bg-l: 97%;
+  --color-brand: #703bfa;
   --font-size-base: 1.1rem;
   --font-size-small: 0.76rem;
   --font-size-code: 0.86rem;
@@ -20,6 +21,7 @@ main {
 h1 {
   font-size: 1.5rem;
   margin-top: 0;
+  color: var(--color-brand);
 }
 
 p {
@@ -29,6 +31,23 @@ p {
 main a {
   display: inline;
   margin-left: 0;
+}
+
+a {
+  border-bottom: 0;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: color-mix(in srgb, currentColor 48%, transparent);
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.22em;
+}
+
+a:hover {
+  border-bottom: 0;
+  color: var(--color-brand);
+  text-decoration-color: var(--color-brand);
+  text-decoration-thickness: 0.08em;
+  text-decoration-style: solid;
 }
 
 main ul {
@@ -42,10 +61,18 @@ main ol {
 }
 
 .path-nav {
+  color: var(--color-text-muted);
   padding-top: 0;
   padding-bottom: calc(var(--spacing-base) * 0.85);
   margin-bottom: calc(var(--spacing-base) * 0.9);
   border-bottom: 1px solid var(--color-border);
+}
+
+.path-nav a,
+.path-nav a:hover,
+.path-nav li.current a {
+  color: var(--color-text-muted);
+  font-weight: normal;
 }
 
 .terminal-nav {
@@ -83,6 +110,7 @@ footer a {
     --bg-h: 42;
     --bg-s: 8%;
     --bg-l: 12%;
+    --color-brand: #b39cff;
     --color-bg-secondary: hsl(42 8% 14%);
     --color-border: hsl(42 7% 21%);
     --color-selection-bg: hsl(42 10% 24%);
@@ -93,6 +121,7 @@ footer a {
   --bg-h: 42;
   --bg-s: 8%;
   --bg-l: 12%;
+  --color-brand: #b39cff;
   --color-bg-secondary: hsl(42 8% 14%);
   --color-border: hsl(42 7% 21%);
   --color-selection-bg: hsl(42 10% 24%);
@@ -120,5 +149,38 @@ footer a {
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
   color: var(--color-text-primary);
-  border-bottom: 1px dotted var(--color-text-primary);
+  border-bottom: 0;
+}
+
+.email-reveal {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75em;
+  flex-wrap: wrap;
+}
+
+.email-reveal::before {
+  content: "e-mail:";
+}
+
+.email-reveal__button {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+  font: inherit;
+  cursor: pointer;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: color-mix(in srgb, currentColor 48%, transparent);
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.22em;
+}
+
+.email-reveal__button:hover,
+.email-reveal__button:focus-visible {
+  color: var(--color-brand);
+  text-decoration-color: var(--color-brand);
+  text-decoration-style: solid;
 }

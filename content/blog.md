@@ -7,4 +7,9 @@ showreadingtime = false
 showlastmod = false
 +++
 
-Oops, this page is in development right now ¯\\\(ツ)\/¯
+I am currenlty interested in ...
+- [mathematics](/mathematics)
+- [ai](/ai)
+- [physics](/physics)
+
+Btw, my list of the [best no-brain-rot youtubers](/youtubers) that explain cool stuff.

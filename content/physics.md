@@ -5,7 +5,7 @@ description = "What I learn about physics."
 
 September 2026, I will be trying to compete at the German [Physikolympiade](https://www.scienceolympiaden.de/ipho).
 
-_Throwback to last year, where I was eligible for the_ [Junior Science Olympiade](https://www.scienceolympiaden.de/ijso/ijso-material-aufgaben/anforderungen-regeln) _but I desperately failed at the second round (it wasn't even that hard, just science trivia which I supposedly WAS bad at)._
+_Throwback to last year, where I was eligible for the_ [Junior Science Olympiade](https://www.scienceolympiaden.de/ijso/ijso-material-aufgaben/anforderungen-regeln) _but I desperately failed at the second round (it wasn't even that hard, just science trivia which I was bad at the time)._
 
 __Free Resources__: 
 
