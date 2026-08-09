@@ -1,5 +1,5 @@
 +++
-title = "blog"
+title = "writings"
 description = "Daniel's Future Blog."
 toc = false
 comments = false

@@ -51,8 +51,8 @@ disableKinds = ["taxonomy", "term", "rss"]
     url = "https://www.linkedin.com/in/danielpanoor/"
     weight = 40
   [[menu.main]]
-    name = "blog"
-    url = "/blog/"
+    name = "writings"
+    url = "/writings/"
     weight = 50
 
 [build]
