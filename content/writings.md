@@ -12,4 +12,6 @@ I am currenlty interested in ...
 - [ai](/ai)
 - [physics](/physics)
 
+Read [this](/story-of-this-site) if you want to know how I came to build this site.
+
 Btw, my list of the [best no-brain-rot youtubers](/youtubers) that explain cool stuff.
