@@ -1,4 +1,4 @@
-# Daniel Panoor — Personal Portfolio
+# A Minimalist's Homepage
 
 A fast, minimal Hugo portfolio site for Daniel Panoor's projects, writing, contact information, and public work.
 
