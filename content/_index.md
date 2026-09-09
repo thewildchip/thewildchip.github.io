@@ -3,7 +3,7 @@ title = "Daniel Panoor"
 description = "Daniel Panoor's Portfolio Homepage"
 +++
 
-# Daniel Panoor
+<h1 class="typing-title" aria-label="Daniel Panoor"><span aria-hidden="true">Daniel Panoor</span></h1>
 
 I am a high school student from munich ^‿^ and an aspiring [polymath](https://en.wikipedia.org/wiki/Polymath) - I love learning things, building stuff and solving problems.
 
