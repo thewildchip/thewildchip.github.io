@@ -1,49 +1,51 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  <article{{ with .Params.page_class }} class="{{ . }}"{{ end }}>
+    <h1>{{ .Title }}</h1>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
-  {{ $hasToC := .Params.toc | default site.Params.showtoc | default false }}
-  {{ $headers := findRE "<h[2-6]" .Content }}
-  {{ if and $hasToC (ge (len $headers) 1) }}
-    <details class="toc" open>
-      <summary class="toc-title">Table of contents</summary>
-      <nav class="toc-content">
-        {{ .TableOfContents }}
-      </nav>
-    </details>
-  {{ end }}
+    {{ $hasToC := .Params.toc | default site.Params.showtoc | default false }}
+    {{ $headers := findRE "<h[2-6]" .Content }}
+    {{ if and $hasToC (ge (len $headers) 1) }}
+      <details class="toc" open>
+        <summary class="toc-title">Table of contents</summary>
+        <nav class="toc-content">
+          {{ .TableOfContents }}
+        </nav>
+      </details>
+    {{ end }}
 
-  {{ .Content }}
+    {{ .Content }}
 
-  {{ if not .Date.IsZero }}
-    <div class="time">
-      {{ partial "date.html" .Date }}
-      {{ $showReadingTime := .Params.showreadingtime | default site.Params.showreadingtime | default false }}
-      {{ if and $showReadingTime .ReadingTime }}
-        <span class="reading-time"> · {{ .ReadingTime }} min read</span>
-      {{ end }}
-      {{ $showLastMod := .Params.showlastmod | default site.Params.showlastmod | default false }}
-      {{ if and $showLastMod .Lastmod }}
-        {{ if ne .LastMod.Format "2006-01-02" .Date.Format "2006-01-02" }}
-          <span class="lastmod"> · Last updated: {{ .LastMod.Format "2006-01-02" }}</span>
+    {{ if not .Date.IsZero }}
+      <div class="time">
+        {{ partial "date.html" .Date }}
+        {{ $showReadingTime := .Params.showreadingtime | default site.Params.showreadingtime | default false }}
+        {{ if and $showReadingTime .ReadingTime }}
+          <span class="reading-time"> · {{ .ReadingTime }} min read</span>
         {{ end }}
-      {{ end }}
-    </div>
-  {{ end }}
-
-  {{ if and .Content (default site.Params.comments .Params.comments) }}
-    <div class="comments">{{- partial "comments" . -}}</div>
-  {{ end }}
-
-  {{ if not .IsHome }}
-    <div class="terminal-nav">
-      <div class="back-nav">
-        {{ with .Parent }}
-          <a href="{{ .RelPermalink }}" class="back-link">../</a>
-        {{ else }}
-          <a href="{{ "/" | relURL }}" class="back-link">../</a>
+        {{ $showLastMod := .Params.showlastmod | default site.Params.showlastmod | default false }}
+        {{ if and $showLastMod .Lastmod }}
+          {{ if ne .LastMod.Format "2006-01-02" .Date.Format "2006-01-02" }}
+            <span class="lastmod"> · Last updated: {{ .LastMod.Format "2006-01-02" }}</span>
+          {{ end }}
         {{ end }}
       </div>
-    </div>
-  {{ end }}
+    {{ end }}
+
+    {{ if and .Content (default site.Params.comments .Params.comments) }}
+      <div class="comments">{{- partial "comments" . -}}</div>
+    {{ end }}
+
+    {{ if not .IsHome }}
+      <div class="terminal-nav">
+        <div class="back-nav">
+          {{ with .Parent }}
+            <a href="{{ .RelPermalink }}" class="back-link">../</a>
+          {{ else }}
+            <a href="{{ "/" | relURL }}" class="back-link">../</a>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </article>
 {{ end }}

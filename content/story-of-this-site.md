@@ -1,11 +1,13 @@
 +++
 title = "story of this site"
-description = "How & Why Did I build this?"
+description = "How and why I built this."
+page_class = "story-page"
 +++
 
-**F*ck React – A Minimalist's Homepage**
+**F\*ck React – A Minimalist's Homepage**  
+[Source code](https://github.com/thewildchip/thewildchip.github.io)
 
-(clickbait title haha)
+_(clickbait title haha)_
 
 Anyone who is interested in AI knows Andrej Karpathy. While reading through [his homepage](https://karpathy.ai/) (last visited: 09/09/26), I stumbled upon this paragraph:
 
