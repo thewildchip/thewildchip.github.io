@@ -89,6 +89,7 @@ p {
 main a {
   display: inline;
   margin-left: 0;
+  text-decoration-color: var(--color-brand);
 }
 
 a {
@@ -100,7 +101,8 @@ a {
   text-underline-offset: 0.22em;
 }
 
-a:hover {
+main a:hover,
+main a:focus-visible {
   border-bottom: 0;
   color: var(--color-brand);
   text-decoration-color: var(--color-brand);
