@@ -1,0 +1,23 @@
+<!-- https://github.com/DenverCoder1/readme-typing-svg/ -->
+<svg xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    viewBox='0 0 435 50'
+    style='background-color: #00000000;'
+    width='435px' height='50px'>
+
+    
+                <path id='path0'>
+                            <!-- Single line -->
+                                <animate id='d0' attributeName='d' begin='0s'
+                    dur='5250ms' fill='freeze'
+                    values='m0,25 h0 ; m0,25 h435 ; m0,25 h435 ; m0,25 h435' keyTimes='0;0.60952380952381;0.84761904761905;1' />
+                    </path>
+    <text font-family='"Roboto Mono", monospace' fill='#B29CFF' font-size='30'
+        dominant-baseline='middle'
+        x='50%' text-anchor='middle'
+        letter-spacing='normal'>
+        <textPath xlink:href='#path0'>
+            A Minimalist&#039;s Homepage
+        </textPath>
+    </text>
+</svg>

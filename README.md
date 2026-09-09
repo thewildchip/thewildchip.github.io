@@ -1,8 +1,20 @@
-# A Minimalist's Homepage
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/readme/title-dark.svg" />
+      <img src="assets/readme/title-light.svg" alt="A Minimalist's Homepage" />
+    </picture>
+  </a>
 
-A fast, minimal Hugo portfolio site for Daniel Panoor's projects, writing, contact information, and public work.
+  <p>
+    A fast, minimal Hugo portfolio site for Daniel Panoor's projects, writing, contact information, and public work.
+  </p>
 
-[View the live site](https://thewildchip.github.io/) · [Source code](https://github.com/thewildchip/thewildchip.github.io)
+  <p>
+    <a href="https://thewildchip.github.io/">View the live site</a> ·
+    <a href="https://github.com/thewildchip/thewildchip.github.io">Source code</a>
+  </p>
+</div>
 
 ## Overview
 
@@ -81,4 +93,5 @@ Personal content, including writing, biographical text, CV material, and persona
 
 - Built with [Hugo](https://github.com/gohugoio/hugo).
 - Uses the [Shibui](https://github.com/ntk148v/shibui) Hugo theme.
+- README typing SVG generated with [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg).
 - Hosted with [GitHub Pages](https://pages.github.com/).
