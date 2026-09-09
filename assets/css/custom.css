@@ -24,6 +24,64 @@ h1 {
   color: var(--color-brand);
 }
 
+.typing-title {
+  color: var(--color-brand);
+  width: max-content;
+  max-width: 100%;
+}
+
+.typing-title span {
+  display: inline-block;
+  color: var(--color-brand);
+  overflow: hidden;
+  width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  animation: type-home-title 2.2s steps(13, end) 0.25s forwards;
+}
+
+.typing-title::after {
+  content: "";
+  display: inline-block;
+  height: 0.95em;
+  margin-left: 0.08em;
+  border-right: 0.32em solid currentColor;
+  vertical-align: 0.14em;
+  animation: blink-home-title 1s step-end 4.5 forwards;
+}
+
+@keyframes type-home-title {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 13ch;
+  }
+}
+
+@keyframes blink-home-title {
+  0%,
+  100% {
+    border-color: currentColor;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-title span {
+    width: auto;
+    animation: none;
+  }
+
+  .typing-title::after {
+    content: none;
+  }
+}
+
 p {
   max-width: 58ch;
 }
